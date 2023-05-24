@@ -9,6 +9,9 @@
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
+  "engines": {
+    "node": ">=17"
+  },
   "dependencies": {
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
