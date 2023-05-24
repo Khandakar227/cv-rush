@@ -16,7 +16,7 @@ const templates = [
 
 const V2 = () => {
     const [theme, setTheme] = useState("#4338ca");
-    const [templateNumber, setTemplate] = useState(2);
+    const [templateNumber, setTemplate] = useState(1);
     const { undo, redo, setRedoStack, setUndoStack } = useUndoRedo();
 
     const changeTemplate = (e: ChangeEvent) => {

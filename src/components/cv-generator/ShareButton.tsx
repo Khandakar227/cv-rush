@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { AiFillFacebook, AiOutlineShareAlt } from "react-icons/ai";
 import { FaShare } from "react-icons/fa";
 
 function ShareButton() {
-  const [sharingOption, setShowSharingOption] = useState(false);
+  const [_, setShowSharingOption] = useState(false);
 
   return (
     <>

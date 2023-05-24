@@ -70,11 +70,11 @@ const DragEditDiv: React.FC<DEDivProps> = ({
   // const [undoRedoElement, setElement] = useState({} as UndoRedoElement);
   // const [disabled, setDisabled] = useState(props.disabledrag || false);
   // const [menuPos, setMenuPos] = useState({ x: 0, y: 0 });
-  const [fontSize, setFontSize] = useState(props.fontSize || 16);
+  // const [fontSize, setFontSize] = useState(props.fontSize || 16);
   const [showMenu, setShowMenu] = useState(false);
 
 
-  const handleDragStart = (e: DraggableEvent) => {
+  const handleDragStart = (_: DraggableEvent) => {
     const element = divRef.current;
 
     updateStates({
@@ -83,7 +83,7 @@ const DragEditDiv: React.FC<DEDivProps> = ({
     })
   };
 
-  const handleDragEnd = (e: DraggableEvent) => {
+  const handleDragEnd = (_: DraggableEvent) => {
     const element = divRef.current;
     //Add undoRedo to element
     updateStates({
@@ -97,11 +97,11 @@ const DragEditDiv: React.FC<DEDivProps> = ({
     });
   };
 
-  const onFocus = () => {
-  }
+  // const onFocus = () => {
+  // }
 
-  const onBlur = () => {
-  }
+  // const onBlur = () => {
+  // }
 
   function handleContextMenu(e: React.MouseEvent) {
     if (props.disableContextMenu) return;

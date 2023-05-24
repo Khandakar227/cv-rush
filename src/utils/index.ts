@@ -14,8 +14,6 @@ export function drag(elementId:string, translate:string) {
 }
 
 export function svgToImage(svgElement:SVGSVGElement, callBack:(imgData:string)=>void) {
-  const rect = svgElement.getBoundingClientRect();
-  
   const xml = new XMLSerializer().serializeToString(svgElement);
   const svg64 = 'data:image/svg+xml;base64,' + encodeURIComponent(btoa(xml));
   

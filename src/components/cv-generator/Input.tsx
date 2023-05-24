@@ -1,13 +1,11 @@
-import React, { useEffect, useState } from "react";
-
-interface InputProps {
-  label: string;
-  name: string;
-  placeholder: string;
-  type: string;
-  element?: "textarea" | string;
-  props?: any;
-}
+// interface InputProps {
+//   label: string;
+//   name: string;
+//   placeholder: string;
+//   type: string;
+//   element?: "textarea" | string;
+//   props?: any;
+// }
 
 const Input = ({
   label,
