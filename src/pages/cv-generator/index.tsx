@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import JsPDF, { HTMLFontFace } from "jspdf";
 import { AiOutlineUndo, AiOutlineRedo } from "react-icons/ai"
 import UndoRedoProvider, { useUndoRedo } from "../../context/undoRedo";
@@ -16,11 +16,18 @@ const templates = [
 
 const V2 = () => {
     const [theme, setTheme] = useState("#4338ca");
-    const [templateNumber, setTemplate] = useState(1);
+    const [templateNumber, setTemplate] = useState(0);
     const { undo, redo, setRedoStack, setUndoStack } = useUndoRedo();
 
+    useEffect(()=> {
+        const tempNum = localStorage.getItem('templateNumber');
+        if(tempNum) setTemplate(+tempNum);
+        else setTemplate(1);
+    }, [])
+
     const changeTemplate = (e: ChangeEvent) => {
-        setTemplate(+(e.target as HTMLSelectElement).value)
+        setTemplate(+(e.target as HTMLSelectElement).value);
+        localStorage.setItem('templateNumber', (e.target as HTMLSelectElement).value);
         setUndoStack([]);
         setRedoStack([]);
     }
@@ -43,6 +50,13 @@ const V2 = () => {
         const report = new JsPDF("p", "pt", "a4", true);
         // Get the html element using selector
         const cv = document.querySelector("#cv_template") as HTMLElement;
+        //To fix the bottom padding issue
+        const els = document.querySelectorAll('[data-padding]');
+        els.forEach(el => {
+            (el as HTMLElement).style.paddingBottom = "1rem";
+            (el as HTMLElement).style.paddingTop = "0rem";
+        });
+
         report
             .html(cv, {
                 windowWidth: cv.clientWidth + cv.clientWidth / 3,
@@ -53,9 +67,12 @@ const V2 = () => {
             })
             .then(() => {
                 report.save("cvrush.pdf");
+                els.forEach(el => {
+                    (el as HTMLElement).style.paddingBottom = "";
+                    (el as HTMLElement).style.paddingTop = "";
+                });
             });
     };
-
 
     return (
         <>
@@ -69,15 +86,17 @@ const V2 = () => {
                     <button className="p-1" title="Redo" onClick={redo}><AiOutlineRedo className="scale-125" /><small>Redo</small></button>
                     <ColorPicker theme={theme} setTheme={setTheme} />
                 </div>
-                <button className="px-3 py-1 rounded-md text-white bg-slate-900 text-sm" onClick={generatePDF}> Export </button>
+                <button className="px-8 py-1 rounded-md text-white bg-slate-900 text-sm" onClick={generatePDF}> Export </button>
             </div>
             <div className="min-custom-h h-full w-full grid justify-center items-stretch p-4">
                 {
                     templateNumber == 1 ?
                         <Template2 themeColor={theme} /> :
-                        templateNumber == 2 ?
-                            <Template3 themeColor={theme} /> :
-                            <Template1 themeColor={theme} />
+                    templateNumber == 2 ?
+                        <Template3 themeColor={theme} /> :
+                        templateNumber == 3 ?
+                        <Template1 themeColor={theme} /> :
+                        ""
                 }
             </div>
         </>

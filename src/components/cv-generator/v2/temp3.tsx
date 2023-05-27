@@ -26,12 +26,12 @@ function Template3({themeColor}:Props) {
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel enim tempora, dignissimos similique doloribus mollitia aut soluta rerum natus ipsam repudiandae, obcaecati consequuntur laborum dolorem quis inventore maiores accusantium corporis.
                     </DragEditDiv>
 
-                    <DragEditDiv style={{background: themeColor}} className="text-white py-2 px-2 mt-2 font-bold rounded-br-xl rounded-tl-xl text-center" > SKILLS </DragEditDiv>
+                    <DragEditDiv style={{background: themeColor}} className="text-white py-2 px-2 mt-2 font-bold rounded-br-xl rounded-tl-xl text-center" data-padding > SKILLS </DragEditDiv>
                     <ProgressBar themeColor={themeColor} text="Content Writing" percentage={80}/>
                     <ProgressBar themeColor={themeColor} text="Product Design" percentage={90}/>
                     <ProgressBar themeColor={themeColor} text="UI Design" percentage={70}/>
 
-                    <DragEditDiv style={{background: themeColor}} className="z-1 text-white py-2 px-2 my-2 font-bold rounded-br-xl rounded-tl-xl text-center" > CONTACT </DragEditDiv>
+                    <DragEditDiv style={{background: themeColor}} className="z-1 text-white py-2 px-2 my-2 font-bold rounded-br-xl rounded-tl-xl text-center" data-padding > CONTACT </DragEditDiv>
                     <div>
                         <DragEditDiv className="font-semibold" fontSize={14}> Uttara Dhaka, Bangladesh </DragEditDiv>
                         <DragEditDiv className="pb-1 text-gray-800" fontSize={12}> Lorem, ipsum dolor sit amet consectetur adipisicing elit.</DragEditDiv>
@@ -46,7 +46,7 @@ function Template3({themeColor}:Props) {
                     </div>
                 </div>
                 <div className="col-span-7 pr-4 pt-24">
-                    <DragEditDiv style={{background: themeColor}} className="z-1 text-white py-2 px-2 mt-4 mb-2 font-bold rounded-br-xl rounded-tl-xl text-center" > Experience </DragEditDiv>
+                    <DragEditDiv style={{background: themeColor}} className="z-1 text-white py-2 px-2 mt-4 mb-2 font-bold rounded-br-xl rounded-tl-xl text-center" data-padding > Experience </DragEditDiv>
                     
                     <DragEditDiv className="font-semibold" fontSize={15}> Company Name </DragEditDiv>
                     <DragEditDiv className="border-b pb-1 mb-1 rounded-md" fontSize={14}> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium reiciendis sint molestiae sed? </DragEditDiv>
@@ -57,7 +57,7 @@ function Template3({themeColor}:Props) {
                     <DragEditDiv className="font-semibold" fontSize={15}> Company Name </DragEditDiv>
                     <DragEditDiv className="border-b pb-1 mb-1 rounded-md" fontSize={14}> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium reiciendis sint molestiae sed? </DragEditDiv>
                     
-                    <DragEditDiv style={{background: themeColor}} className="z-1 text-white py-2 px-2 mt-4 mb-2 font-bold rounded-br-xl rounded-tl-xl text-center" > Education </DragEditDiv>
+                    <DragEditDiv style={{background: themeColor}} className="z-1 text-white py-2 px-2 mt-4 mb-2 font-bold rounded-br-xl rounded-tl-xl text-center" data-padding > Education </DragEditDiv>
                     
                     <DragEditDiv className="font-semibold" fontSize={15}> School Name </DragEditDiv>
                     <DragEditDiv className="border-b pb-1 mb-1 rounded-md" fontSize={14}> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium reiciendis sint molestiae sed? </DragEditDiv>

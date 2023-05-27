@@ -33,5 +33,6 @@ export function svgToImage(svgElement:SVGSVGElement, callBack:(imgData:string)=>
     callBack(canvas.toDataURL('image/png'));
     
     img.style.display = 'none';
+    img.remove();
   }
 }
