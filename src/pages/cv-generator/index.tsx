@@ -90,11 +90,11 @@ const V2 = () => {
             </div>
             <div className="min-custom-h h-full w-full grid justify-center items-stretch p-4">
                 {
-                    templateNumber == 1 ?
+                    templateNumber == 0 ?
                         <Template2 themeColor={theme} /> :
-                    templateNumber == 2 ?
+                    templateNumber == 1 ?
                         <Template3 themeColor={theme} /> :
-                        templateNumber == 3 ?
+                        templateNumber == 2 ?
                         <Template1 themeColor={theme} /> :
                         ""
                 }
