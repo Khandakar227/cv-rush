@@ -36,12 +36,12 @@ const Template1 = ({themeColor}:Props) => {
                         </div>
                         <div className="py-2 text-sm">
                             <DragEditDiv fontSize={20} className="mt-4 mb-2 pb-1 font-semibold"> Awards </DragEditDiv>
-                            <DragEditDiv className="font-bold"> Champion at Divisional Physics Olympiad </DragEditDiv>
+                            <DragEditDiv className="font-bold"> Lorem ipsum dolor sit amet </DragEditDiv>
                             <DragEditDiv> 27 December 2002 </DragEditDiv>
                         </div>
 
                         <div className="py-2 text-sm">
-                            <DragEditDiv className="font-bold"> Second Runners Up at Coderush Hackathon </DragEditDiv>
+                            <DragEditDiv className="font-bold"> Lorem ipsum dolor sit ametjh jbhv </DragEditDiv>
                             <DragEditDiv> 20 March 2023 </DragEditDiv>
                         </div>
 
