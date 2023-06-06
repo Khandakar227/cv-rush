@@ -145,7 +145,7 @@ function CVImage(props: CVImageProps) {
     })
   }
   return (
-    <div className="relative z-0">
+    <div className="relative z-1">
       <img
         id="displayPhoto"
         ref={DisplayPhotRef}
