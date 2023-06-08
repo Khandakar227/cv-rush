@@ -3,12 +3,10 @@ import CVImage from "../CVImage";
 import DragEditDiv from "../../../components/DEDiv";
 import ProgressBar from "../../../components/ProgressBar";
 import WaveBgBottom from "../../../components/WaveBgBottom";
+import { CVTemplateProps } from "../../../utils/types";
 
-interface Props {
-    themeColor: string;
-}
 
-function Template3({themeColor}:Props) {
+function Template3({themeColor}:CVTemplateProps) {
 
     return (
     <>

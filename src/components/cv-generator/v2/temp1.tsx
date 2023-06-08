@@ -1,11 +1,9 @@
 import DragEditDiv from "../../../components/DEDiv";
+import { CVTemplateProps } from "../../../utils/types";
 import CVImage from "../CVImage";
 
-interface Props {
-    themeColor: string;
-}
 
-const Template1 = ({themeColor}:Props) => {
+const Template1 = ({themeColor}:CVTemplateProps) => {
     return (
         <>
             <div className="bg-white w-[600px] shadow border outline-none relative font-lora page resize overflow-auto" id="cv_template">

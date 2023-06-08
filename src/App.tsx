@@ -25,7 +25,7 @@ function App() {
     const Android = userAgent.indexOf("android") > -1;
     
     if (Android || window.innerWidth <= 600) {
-      toast.warn('Note: This app was designed for desktop users. It is not mobile responsive.');
+      toast.warn('Note: For better user experience use it on Desktop');
     }
   }, [])
   return (

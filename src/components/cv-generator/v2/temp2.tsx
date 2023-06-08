@@ -1,12 +1,10 @@
 import DragEditDiv from "../../../components/DEDiv";
 import CVImage from "../CVImage";
 import EditDiv from "../../../components/EditDiv";
+import { CVTemplateProps } from "../../../utils/types";
 
-interface Props {
-    themeColor: string;
-}
 
-const Template2 = ({ themeColor }: Props) => {
+const Template2 = ({ themeColor }: CVTemplateProps) => {
 
     return (
         <>

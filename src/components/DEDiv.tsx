@@ -3,6 +3,7 @@ import Draggable, { DraggableEvent } from "react-draggable";
 import { UndoRedoElement, UndoRedoFunction, useUndoRedo } from "../context/undoRedo";
 import { drag } from "../utils";
 import ContextMenu from "./ContextMenu";
+import { useDragEnable } from "../context/dragEnable";
 
 interface DEDivProps extends HTMLAttributes<HTMLDivElement> {
   fontSize?: number
@@ -66,11 +67,8 @@ const DragEditDiv: React.FC<DEDivProps> = ({
     fontSize: props.fontSize || 16,
   });
 
+  const {enableDrag} = useDragEnable()
   const { addUndo } = useUndoRedo();
-  // const [undoRedoElement, setElement] = useState({} as UndoRedoElement);
-  // const [disabled, setDisabled] = useState(props.disabledrag || false);
-  // const [menuPos, setMenuPos] = useState({ x: 0, y: 0 });
-  // const [fontSize, setFontSize] = useState(props.fontSize || 16);
   const [showMenu, setShowMenu] = useState(false);
 
 
@@ -163,7 +161,7 @@ const DragEditDiv: React.FC<DEDivProps> = ({
   return (
     <>
       {divRef.current && (
-        <Draggable grid={[10, 10]} disabled={states.disabled} onStart={handleDragStart} onStop={handleDragEnd}>
+        <Draggable grid={[10, 10]} disabled={states.disabled ? states.disabled : !enableDrag} onStart={handleDragStart} onStop={handleDragEnd}>
           <div
             {...props}
             id={id}

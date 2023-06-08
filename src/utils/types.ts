@@ -24,3 +24,8 @@ export interface ClientDataProps {
   experience: string[];
   [key: string]: any;
 }
+
+
+export type CVTemplateProps = {
+  themeColor: string;
+}

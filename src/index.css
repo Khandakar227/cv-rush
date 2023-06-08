@@ -4,7 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-#root {
+body {
     background-image: url(/images/wavy-bg.jpg);
     background-position: center;
     background-repeat: no-repeat;
